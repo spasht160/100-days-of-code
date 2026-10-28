@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    char str[100];
+    int i = 0, j, flag = 1;
+
+    scanf("%99s", str);
+
+    while (str[i] != '\0') {
+        i++;
+    }
+
+    j = i - 1;
+
+    for (i = 0; i < j; i++, j--) {
+        if (str[i] != str[j]) {
+            flag = 0;
+            break;
+        }
+    }
+
+    if (flag)
+        printf("Palindrome");
+    else
+        printf("Not palindrome");
+
+    return 0;
+}
